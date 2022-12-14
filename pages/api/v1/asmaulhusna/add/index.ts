@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import authorization from '../../../../middlewares/authorization';
-import db from '../../../../libs/db'
-import { ResponseData } from '../../../../types/responseData';
+import authorization from '../../../../../middlewares/authorization';
+import db from '../../../../../libs/db'
+import { ResponseData } from '../../../../../types/responseData';
 
 export default async function handler(req:NextApiRequest, res:NextApiResponse<ResponseData>) {
     if (req.method !== "POST") return res.status(405).end();

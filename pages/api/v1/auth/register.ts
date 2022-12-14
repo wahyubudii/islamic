@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import db from '../../../libs/db'
+import db from '../../../../libs/db'
 import bycript from 'bcryptjs'
-import { ResponseData } from "../../../types/responseData";
+import { ResponseData } from "../../../../types/responseData";
 
 export default async function handler(req:NextApiRequest, res:NextApiResponse<ResponseData>) {
     if (req.method !== "POST") return res.status(405).end()

@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import db from '../../../libs/db'
+import db from '../../../../libs/db'
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
-import { ResponseData } from '../../../types/responseData'
+import { ResponseData } from '../../../../types/responseData'
 
 export default async function handler(req:NextApiRequest, res:NextApiResponse<ResponseData>) {
     if (req.method !== "POST") return res.status(405).end()
